@@ -3,9 +3,8 @@ class Snippet < ApplicationRecord
 
   scope :not_expired, -> { where("expires_at > ?", Time.zone.now) }
 
-  before_create :set_expiration
-
-  def set_expiration
+  def initialize(params)
+    super
     self.expires_at ||= Time.zone.now + self.expires_in.seconds
   end
 

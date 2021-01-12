@@ -7,8 +7,8 @@
 
 ## Steps to run locally
 * Run `bundle` command to install server side dependencies
-* Run `rails db:create && rails db:migrate`
-* Run `rails s` to start all processes
+* Run `./bin/rails db:create && rails db:migrate`
+* Run `./bin/rails s` to start server
 * API server is running at host and port http://localhost:3000
 
 ## Sample API request
