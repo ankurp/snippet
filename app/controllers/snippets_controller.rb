@@ -51,7 +51,7 @@ class SnippetsController < ApplicationController
     end
 
     def authenticate
-      if snippet_params[:password] == @snippet.password
+      if snippet_params[:password] != @snippet.password
         render json: {}, status: :unauthorized and return
       end
     end
